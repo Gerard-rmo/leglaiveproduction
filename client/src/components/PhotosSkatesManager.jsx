@@ -50,7 +50,7 @@ const PhotosSkatesManager = () => {
 
     try {
       setLoading(true);
-      await axiosConfig.delete(`VITE_REACT_APP_API_URL/photos/${id}`);
+      await axiosConfig.delete(`/photos/${id}`);
       fetchPhotos();
     } catch (err) {
       console.error('Erreur suppression:', err);

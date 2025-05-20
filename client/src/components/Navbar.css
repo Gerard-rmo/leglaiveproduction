@@ -1,6 +1,6 @@
 /* --- Structure fixe --- */
 .nav {
-  background-color: rgb(28, 91, 143);
+  background: linear-gradient(to right, rgb(7, 68, 119), rgb(169, 189, 248));
   padding: 13px;
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@
 
 .navLink {
   color: white;
-  margin:0 49px;
+  margin: 0 49px;
   text-decoration: none;
   font-size: 15px;
   transition: transform 0.2s ease-in-out;
@@ -120,9 +120,9 @@
     top: 58px;
     left: 0;
     right: 0;
-    background-color: rgb(28, 91, 143);
+    background: linear-gradient(to right, rgb(7, 68, 119), rgb(169, 189, 248));
     flex-direction: column;
-    align-items:start;
+    align-items: start;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -139,4 +139,3 @@
     margin: 12px 0;
   }
 }
-

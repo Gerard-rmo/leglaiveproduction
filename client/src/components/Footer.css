@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgb(28, 91, 143);
+  background: linear-gradient(to right, rgb(7, 68, 119), rgb(169, 189, 248));
   padding: 13px;
   display: flex;
   justify-content: space-evenly;

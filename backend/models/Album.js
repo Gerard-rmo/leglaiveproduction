@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Création du schéma de données pour les albums
+// Création du schéma de données pour les albums de BD
 
 const AlbumSchema = new mongoose.Schema(
   {

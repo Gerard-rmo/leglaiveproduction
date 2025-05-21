@@ -11,7 +11,7 @@ import Skates from './pages/Skates';
 import AlbumDetailPage from './pages/AlbumDetailPage';
 import DashboardAdmin from './components/DashboardAdmin';
 import LoginPage from './components/LoginPage';
-import PrivateRoute from './components/privateRoute';
+import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
 const App = () => {

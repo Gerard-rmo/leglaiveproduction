@@ -1,0 +1,61 @@
+
+.toggle {
+  right: 20px;
+  top: 40px;
+  margin-left: 20px;
+}
+.checkbox {
+  display: none;
+}
+.checkbox:checked + .label .circle {
+  transform: translate(29px);
+}
+
+.label {
+  background: #cb9c9c;
+  height: 26px;
+  width: 50px;
+  padding: 5px 8px;
+  border-radius: 20%;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  position: relative;
+  transform: scale(1.2);
+}
+.moon,
+.sun {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.sun {
+  transform: translate(3px, -1px);
+}
+.moon {
+  transform: translate(-3px, -1px) rotate(-10deg);
+}
+.circle {
+  background: #eee;
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  transition: transform 0.8s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+}
+
+/* }----------mode nuit---------------------  */
+
+.dark {
+  background-color: rgb(8, 4, 61);
+  color: white;
+}
+.dark .label {
+  box-shadow: 2px 2px 2px #a25b38;
+  background: #000080;
+}
+.dark .circle {
+  background: #a25b38;
+}

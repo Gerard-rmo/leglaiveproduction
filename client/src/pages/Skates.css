@@ -7,19 +7,24 @@
   min-height: 100vh;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cstyle%3E text %7B font-family: 'Bangers', sans-serif; font-weight: bold; fill: rgba(0,0,0,0.1); %7D %3C/style%3E%3Cg%3E%3Ccircle cx='50' cy='50' r='40' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='200' cy='70' r='25' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='20' y='100' font-size='30'%3EBAM!%3C/text%3E%3Ctext x='120' y='170' font-size='35'%3EPOW!%3C/text%3E%3Ctext x='60' y='50' font-size='20'%3EWHAM!%3C/text%3E%3Ccircle cx='80' cy='230' r='15' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='220' cy='220' r='10' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='140' y='240' font-size='18'%3EWOW!%3C/text%3E%3C/g%3E%3C/svg%3E"),
     linear-gradient(
-      90deg,
-      rgba(249, 198, 58, 0.94) 30%,
-      rgba(254, 250, 123, 0.91) 67%,
-      rgb(253, 255, 161) 100%
-    );
+        35deg,
+        rgba(115, 161, 252, 0.94) 30%,
+        rgba(252, 247, 161, 0.91) 67%,
+        rgb(117, 179, 250) 100%
+      );
   background-repeat: repeat, no-repeat;
   background-size: 350px 350px, cover;
   background-attachment: fixed;
+}
 
   .logo {
-    width: 280px;
-    height: auto;
-    margin-bottom: 5px;
+     width: 450px;
+  height: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+  border: solid 4px rgb(55, 80, 154);
+  margin-bottom: 5px;
+  box-shadow: 15px 15px 50px rgb(1, 21, 77);
   }
 
   .bedetheque-title {
@@ -31,9 +36,9 @@
     margin: 20px auto;
     padding: 10px;
     max-width: 800px;
-    text-shadow: 1px 10px 5px rgb(226, 99, 20);
+    text-shadow: 1px 10px 5px rgb(137, 185, 248);
   }
-}
+
 .photo-listSk {
   list-style: none;
   padding: 0;
@@ -90,6 +95,9 @@
   }
   .photoSk:hover {
     transform: scale(1.2);
+  }
+  .logo{
+    width: 280px;
   }
 }
 

@@ -36,9 +36,13 @@ const Navbar = () => {
           <li className="navItem">
             <Link to="/salons" className="navLink" onClick={() => setMenuOpen(false)}>Salons</Link>
           </li>
+          
         </ul>
+        
       </div>
+      
     </nav>
+    
   );
 };
 

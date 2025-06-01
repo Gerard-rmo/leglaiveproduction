@@ -22,12 +22,10 @@ const HomePage = () => {
       <img src={logo} alt="Logo du glaive production" className="responsive-logo" />
 
       <p className="home-description">
-        BIENVENUE DANS L'UNIVERS DE GERARD ROMERO<br />
-        OÙ VOUS POURREZ DÉCOUVRIR TOUT SON TRAVAIL<br />
+        BIENVENUE DANS L'UNIVERS DE GERARD ROMERO
+        OÙ VOUS POURREZ DÉCOUVRIR TOUT SON TRAVAIL
         ET COMMANDER SES DIFFÉRENTS ALBUMS BD ET AUTRES CRÉATIONS.
       </p>
-
-      <img src={ima} alt="Présentation de l'auteur" className="responsive-logo2" />
 
       <div className="carousel-frise">
         <div className="carousel-track-frise">

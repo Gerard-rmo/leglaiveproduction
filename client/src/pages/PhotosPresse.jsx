@@ -19,7 +19,7 @@ const PhotosPresse = () => {
   return (
     <div className="photos-presse-container">
       <img src={logo} alt="Logo" className="logo" />
-      <p className="bedetheque-title">MES ARTICLES DE PRESSE</p>
+      <p className="presse-title">MES ARTICLES DE PRESSE</p>
       <ul className="photo-listPr">
         {photosPresse.map((photo, index) => (
           <li key={index} className="photo-itemPr">

@@ -37,7 +37,7 @@ const DatesSalons = () => {
 
   return (
     <div className="dates-salons">
-      <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="dates-logo" />
       
       <h1 className='title-salons'>MES PROCHAINES DATES DE SALONS</h1>
       <ul>

@@ -1,6 +1,5 @@
 
 import logo from '../assets/logo.webp';
-import ima from '../assets/pres.webp';
 import slide1 from '../assets/T1.jpg';
 import slide2 from '../assets/T2.jpg';
 import slide3 from '../assets/T3B.jpg';

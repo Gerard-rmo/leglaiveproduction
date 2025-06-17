@@ -50,7 +50,8 @@
   transform: scale(1.9);
 }
 
-/* ✅ Responsive */
+/*------------------------------------------------------------------------------*/
+
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;

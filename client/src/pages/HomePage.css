@@ -88,6 +88,7 @@
 }
 
 /* Animation continue */
+
 @keyframes scrollFrise {
   0% {
     transform: translateX(0%);
@@ -97,7 +98,8 @@
   }
 }
 
-/* Responsive */
+/*----------------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
   .carousel-frise {
     height: 50vh;

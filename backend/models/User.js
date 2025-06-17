@@ -68,6 +68,4 @@ UserSchema.methods.getSignedJwtToken = function () {
   });
 };
 
-//Exportation du modèle de données pour la connexion
-
 export default mongoose.model("User", UserSchema);

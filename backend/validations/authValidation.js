@@ -1,7 +1,6 @@
-// Importer express-validator
+
 import { body, param } from "express-validator";
 
-// Validation pour l'endpoint POST/register.
 // Validation pour la création d'un utilisateur.
 export const validateRegisterUser = [
   body("name")
@@ -28,7 +27,6 @@ export const validateRegisterUser = [
     .withMessage("Le mot de passe doit contenir entre 6 et 200 caractères."),
 ];
 
-// Validation pour l'endpoint POST/login.
 // Validation pour la connexion d'un utilisateur.
 export const validateLoginUser = [
   body("email")
@@ -46,13 +44,11 @@ export const validateLoginUser = [
     .withMessage("Le mot de passe doit contenir au moins 6 caractères."),
 ];
 
-// Validation pour l'endpoint DELETE/user/:id
-// Validation pour la suppression d'un utilisateur
+// Validation pour la suppression d'un utilisateur avec son ID.
 export const validateDeleteUser = [
   param("id").isMongoId().withMessage("ID utilisateur manquant ou invalide."),
 ];
 
-// Validation pour l'endpoint PUT/update/user
 // Validation pour la mise à jour d'un utilisateur
 export const validateUpdateUser = [
   body("name")

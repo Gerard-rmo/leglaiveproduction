@@ -78,7 +78,8 @@
   background-color: #c82333;
 }
 
-/* Responsive optimizations */
+/*-----------------------------------------------------------*/
+
 @media (max-width: 600px) {
   .presse-title {
     font-size: 1.4rem;

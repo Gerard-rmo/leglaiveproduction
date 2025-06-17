@@ -19,7 +19,6 @@ export const protect = async (req, res, next) => {
   }
 
   try {
-    // Verification du token
     const decoded = JWT.verify(token, process.env.JWT_SECRET);
 
     req.user = await User.findById(decoded.id);
@@ -37,8 +36,6 @@ export const adminCheck = async (req, res, next) => {
     if (!req.user) {
       return res.status(401).json({ message: "Utilisateur non authentifié" });
     }
-
-    // Vérifier si l'utilisateur est un admin
     if (req.user.role === "admin") {
       return next();
     } else {

@@ -39,7 +39,6 @@
   text-shadow: 1px 10px 5px rgb(137, 185, 248);
 }
 
-/* ✅ Transforme ta liste en une vraie grille responsive */
 .photo-listSa {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -70,7 +69,8 @@
   transform: scale(1.2);
 }
 
-/* Tablette */
+/*---------------------------------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
   .photos-salons-container .logo {
     width: 280px;

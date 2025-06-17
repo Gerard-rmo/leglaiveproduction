@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 // Fonction pour créer un utilisateur.
 
 export const registerUser = async (req, res, next) => {
+  
   //destructurer les données du corps de la requête.
 
   const { name, email, password, role } = req.body;

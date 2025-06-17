@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-// Création du schéma de données pour les albums de BD
-
 const AlbumSchema = new mongoose.Schema(
   {
     title: {
@@ -21,5 +19,4 @@ const AlbumSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-//  Exportation du modèle de données pour les albums
 export default mongoose.model("Album", AlbumSchema);

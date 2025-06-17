@@ -109,6 +109,9 @@
   position: relative;
   z-index: 1;
 }
+
+/*---------------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
   .dates-salons h4 {
     font-family: "Verdana", serif;

@@ -59,7 +59,8 @@
     padding: 0 15px;
   }
   
-  /* Responsive adjustments */
+  /*--------------------------------------------------------*/
+  
   @media (max-width: 768px) {
     .album-detail-container {
       padding: 20px;

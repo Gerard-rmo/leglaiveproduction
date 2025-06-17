@@ -1,9 +1,8 @@
 import express from "express";
 
-// Importer les middleware pour la protection et la gestion des rôles
+// Middleware pour la protection et la gestion des rôles
 import { protect } from "../middleware/authMiddleware.js";
 
-// Importer les controllers
 import {
   registerUser,
   updateUser,
@@ -11,7 +10,7 @@ import {
   login,
 } from "../controllers/userControllers.js";
 
-// Importer le middleware de validation des requêtes
+// Middleware de validation des requêtes
 import { validateRequest } from "../middleware/validateRequest.js";
 
 import {

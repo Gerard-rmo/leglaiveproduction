@@ -64,7 +64,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Responsive */
+/*---------------------------------------------------------------*/
+
 @media (max-width: 768px) {
   .dashboard-content {
     margin: 0 5%;

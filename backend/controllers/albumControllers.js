@@ -1,19 +1,14 @@
 import Album from "../models/Album.js";
 import { v2 as cloudinary } from "cloudinary";
-import { unlinkSync } from "fs";
+import { unlinkSync } from "fs"; //module natif node.js permettant d'interagir avec le système des fichiers.
 import dotenv from "dotenv";
 dotenv.config();
 
-// Fonction pour ajouter les albums.
-
+// Fonction pour créer les albums.
 export const createAlbum = async (req, res, next) => {
-  // destructurer les données du corps de la requête.
-
   try {
-
+    // destructurer les données du corps de la requête.
     const { title, summary } = req.body;
-
-    //Créer un nouvel album.
 
     if (!title || !summary) {
       return next({
@@ -31,17 +26,17 @@ export const createAlbum = async (req, res, next) => {
     //Téléchargement de l'image vers Cloudinary
 
     const result = await cloudinary.uploader.upload(req.file.path, {
-      folder: "visuels", // Spécifie le dossier sur Cloudinary
-      resource_type: "image", // Type de fichier 
+      folder: "visuels",
+      resource_type: "image", // Type de fichier
     });
     console.log(result);
     // Supprimer le fichier local après le téléchargement
     unlinkSync(req.file.path);
 
-    // Créer un nouvel album dans la base de données
+    // Créer un nouvel album dans la db.
     const album = await Album.create({
       title,
-      imageURL: { public_id: result.public_id, url: result.secure_url }, // URL sécurisée de l'image sur Cloudinary
+      imageURL: { public_id: result.public_id, url: result.secure_url }, // URL sécurisée de l'img Cloudinary.
       summary,
     });
     res.status(201).json({ message: "Album créé avec succès.", album });
@@ -55,7 +50,6 @@ export const createAlbum = async (req, res, next) => {
 export const getAllAlbum = async (req, res, next) => {
   try {
     const allAlbum = await Album.find().select();
-    //Sélectionne tous les albums.
     res.status(200).json({
       message: `Récupération de tous les albums.`,
       allAlbum,
@@ -97,15 +91,6 @@ export const updateAlbum = async (req, res, next) => {
         title: req.body.title,
         summary: req.body.summary,
       };
-      const updateAlbum = await Album.findByIdAndUpdate(id, updateData, {
-        new: true,
-      });
-      if (!updateAlbum) {
-        return res.status(400).json({ message: `Album non trouvé.` });
-      }
-      return res
-        .status(202)
-        .json({ message: `Album mis à jour.`, album: updateAlbum });
     }
   } catch (error) {
     console.error(error);

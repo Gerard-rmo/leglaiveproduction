@@ -1,11 +1,10 @@
-// Importation de la bibliothèque mongoose pour les connexions MongoDB
+//bibliothèque mongoose pour les connexions MongoDB
 import mongoose from "mongoose";
-// Importation de la bibliothèque dotenv pour les variables d'environnement
+//bibliothèque dotenv pour les variables d'environnement
 import dotenv from "dotenv";
-// Chargement des variables d'environnement depuis le fichier .env
+// Chargement des variables d'environnement
 dotenv.config();
 
-// Fonction asynchrone pour se connecter à la base de données MongoDB
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);

@@ -13,9 +13,7 @@ import rateLimit from "express-rate-limit"; // limitation des requêtes.
 
 dotenv.config(); // Chargement des variables d'env.
 const app = express(); // Création d'une instance de l'application Express
-
 connectDB();
-
 cloudinaryConfig();
 
 // Middleware pour gérer les requêtes cross-origin

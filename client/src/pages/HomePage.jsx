@@ -8,7 +8,7 @@ import slide5 from '../assets/AKELARRE.jpg';
 import slide6 from '../assets/ALEM.jpg';
 import slide7 from '../assets/MOSQUITO.jpg';
 import slide8 from '../assets/protecteurs.png';
-import slide9 from '../assets/couv - Copie.png';
+import slide9 from '../assets/couv2.png';
 import slide10 from '../assets/couv.png';
 import slide11 from '../assets/az.png';
 import "./HomePage.css";

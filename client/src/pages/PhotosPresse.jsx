@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axiosConfig from "../Services/AxiosConfig";
-import logo from '../assets/logo.webp';
+import logo from '@assets/logo.webp';
 import "./PhotosPresse.css";
 
 const PhotosPresse = () => {

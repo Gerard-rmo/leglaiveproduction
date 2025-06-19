@@ -11,7 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-/src/assets/
 git-filter-repo.py
 
 # Editor directories and files

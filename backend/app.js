@@ -20,7 +20,7 @@ cloudinaryConfig();
 app.use(
   cors({
     origin: [
-      "http://leglaiveproduction.vercel.app",
+      "https://leglaiveproduction.vercel.app",
       "https://res.cloudinary.com",
     ],
     credentials: true,

@@ -8,4 +8,13 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
+  server: {
+    open: true, // Automatically open the browser on startup
+  },
+  resolve: {
+    alias: {
+      "@": "/src", // Alias for the src directory
+      "@assets": "/src/assets", // Alias for the assets directory
+    },
+  }
 });

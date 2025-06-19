@@ -11,7 +11,6 @@ const AlbumDetailPage = () => {
   useEffect(() => {
     axiosConfig.get(`/albums/${id}`)
       .then(res => {
-        console.log("Album data:", res.data);
         setAlbum(res.data);
         setLoading(false);
       })

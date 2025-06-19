@@ -1,4 +1,4 @@
-import logo from '@assets/logo1.webp';
+import logo from '@assets/logo.webp';
 import slide1 from '@assets/T11.jpg';
 import slide2 from '@assets/T21.jpg';
 import slide3 from '@assets/T3B1.jpg';

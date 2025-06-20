@@ -1,4 +1,3 @@
-// Importation de la version 2 de la bibliothèque cloudinary
 import { v2 as cloudinary } from "cloudinary";
 
 const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME;

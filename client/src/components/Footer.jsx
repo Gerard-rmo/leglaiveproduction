@@ -26,6 +26,16 @@ const Footer = () => {
         <li className="nav-item">
           <Link to="/photos-salons" className="nav-link">Photos des salons</Link>
         </li>
+        <li className="nav-item">
+          <a 
+            href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="nav-link"
+          >
+            Mentions légales / RGPD
+          </a>
+        </li>
       </ul>
 
       <div className="social-links">

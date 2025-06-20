@@ -1,87 +1,86 @@
 .album-detail-container {
-    text-align: center;
-    padding: 20px 0;
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
-    min-height: 100vh;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cstyle%3E text %7B font-family: 'Bangers', sans-serif; font-weight: bold; fill: rgba(0,0,0,0.1); %7D %3C/style%3E%3Cg%3E%3Ccircle cx='50' cy='50' r='40' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='200' cy='70' r='25' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='20' y='100' font-size='30'%3EBAM!%3C/text%3E%3Ctext x='120' y='170' font-size='35'%3EPOW!%3C/text%3E%3Ctext x='60' y='50' font-size='20'%3EWHAM!%3C/text%3E%3Ccircle cx='80' cy='230' r='15' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='220' cy='220' r='10' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='140' y='240' font-size='18'%3EWOW!%3C/text%3E%3C/g%3E%3C/svg%3E"),
-      linear-gradient(
-        35deg,
-        rgba(115, 161, 252, 0.94) 30%,
-        rgba(252, 247, 161, 0.91) 67%,
-        rgb(117, 179, 250) 100%
-      );
-    background-repeat: repeat, no-repeat;
-    background-size: 350px 351px, cover;
-    background-attachment: fixed;
+  text-align: center;
+  padding: 20px 0;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cstyle%3E text %7B font-family: 'Bangers', sans-serif; font-weight: bold; fill: rgba(0,0,0,0.1); %7D %3C/style%3E%3Cg%3E%3Ccircle cx='50' cy='50' r='40' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='200' cy='70' r='25' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='20' y='100' font-size='30'%3EBAM!%3C/text%3E%3Ctext x='120' y='170' font-size='35'%3EPOW!%3C/text%3E%3Ctext x='60' y='50' font-size='20'%3EWHAM!%3C/text%3E%3Ccircle cx='80' cy='230' r='15' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='220' cy='220' r='10' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='140' y='240' font-size='18'%3EWOW!%3C/text%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(
+      35deg,
+      rgba(115, 161, 252, 0.94) 30%,
+      rgba(252, 247, 161, 0.91) 67%,
+      rgb(117, 179, 250) 100%
+    );
+  background-repeat: repeat, no-repeat;
+  background-size: 350px 351px, cover;
+  background-attachment: scroll;
+}
+
+.album-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/sketchy.png");
+  opacity: 3.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.album-detail-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1c183f;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Verdana", serif;
+}
+
+.album-detail-cover {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 20px 10px 2px rgba(29, 18, 4, 0.326);
+  margin-bottom: 20px;
+  border: solid 3px black;
+}
+
+.album-detail-summary {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  font-family: "Verdana", serif;
+  padding: 0 15px;
+}
+
+/*--------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  .album-detail-container {
+    padding: 20px;
   }
-  
-  .album-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://www.transparenttextures.com/patterns/sketchy.png");
-    opacity: 3.5;
-    z-index: 0;
-    pointer-events: none;
-  }
-  
+
   .album-detail-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #1c183f;
-    margin-top: 100px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Verdana', serif;
+    font-size: 24px;
   }
-  
-  .album-detail-cover {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 20px 10px 2px rgba(29, 18, 4, 0.326);
-    margin-bottom: 20px;
-    border: solid 3px black;
-  }
-  
+
   .album-detail-summary {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    font-family: 'Verdana', serif;
-    padding: 0 15px;
+    font-size: 16px;
   }
-  
-  /*--------------------------------------------------------*/
-  
-  @media (max-width: 768px) {
-    .album-detail-container {
-      padding: 20px;
-    }
-  
-    .album-detail-title {
-      font-size: 24px;
-    }
-  
-    .album-detail-summary {
-      font-size: 16px;
-    }
+}
+
+@media (max-width: 480px) {
+  .album-detail-title {
+    font-size: 20px;
   }
-  
-  @media (max-width: 480px) {
-    .album-detail-title {
-      font-size: 20px;
-    }
-  
-    .album-detail-summary {
-      font-size: 15px;
-    }
+
+  .album-detail-summary {
+    font-size: 15px;
   }
-  
+}

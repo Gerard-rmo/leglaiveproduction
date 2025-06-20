@@ -7,15 +7,14 @@
   min-height: 100vh;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cstyle%3E text %7B font-family: 'Bangers', sans-serif; font-weight: bold; fill: rgba(0,0,0,0.1); %7D %3C/style%3E%3Cg%3E%3Ccircle cx='50' cy='50' r='40' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='200' cy='70' r='25' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='20' y='100' font-size='30'%3EBAM!%3C/text%3E%3Ctext x='120' y='170' font-size='35'%3EPOW!%3C/text%3E%3Ctext x='60' y='50' font-size='20'%3EWHAM!%3C/text%3E%3Ccircle cx='80' cy='230' r='15' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='220' cy='220' r='10' fill='rgba(255,255,255,0.1)'/%3E%3Ctext x='140' y='240' font-size='18'%3EWOW!%3C/text%3E%3C/g%3E%3C/svg%3E"),
     linear-gradient(
-        35deg,
-        rgba(115, 161, 252, 0.94) 30%,
-        rgba(252, 247, 161, 0.91) 67%,
-        rgb(117, 179, 250) 100%
-      );
+      35deg,
+      rgba(115, 161, 252, 0.94) 30%,
+      rgba(252, 247, 161, 0.91) 67%,
+      rgb(117, 179, 250) 100%
+    );
   background-repeat: repeat, no-repeat;
   background-size: 350px 350px, cover;
-  background-attachment: fixed;
-
+  background-attachment: scroll;
 }
 
 .photos-presse-container .logo {
@@ -48,7 +47,6 @@
   width: 100%;
   box-sizing: border-box;
   justify-content: center;
-  
 }
 
 .photo-itemPr {
@@ -56,7 +54,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-
 }
 
 .photoPr {
@@ -113,7 +110,6 @@
 }
 
 @media (max-width: 480px) {
-
   .photos-presse-container .presse-title {
     font-size: 14px;
     margin: 10px 5;

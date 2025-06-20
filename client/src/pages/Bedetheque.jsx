@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import logo from '@assets/logo.webp';
 import axiosConfig from '../Services/AxiosConfig.js';
+import Spinner from '../components/Spinner.jsx';
 import "./Bedetheque.css";
 
 const Bedetheque = () => {
@@ -24,6 +25,9 @@ const Bedetheque = () => {
     <div className="bedetheque-container">
       <img src={logo} alt="Logo du glaive production" className="logo" />
       <p className="bedetheque-title">MA BEDETHEQUE</p>
+      {loading && photos.length === 0 ? (
+        <Spinner />
+      ) : 
 
       <div className="gallery">
         {albums.map((album) => (
@@ -40,7 +44,7 @@ const Bedetheque = () => {
            <p className="album-title">{album.titre || album.title}</p>
           </div>
         ))}
-      </div>
+      </div>}
     </div>
   );
 };

@@ -25,9 +25,6 @@ const Bedetheque = () => {
     <div className="bedetheque-container">
       <img src={logo} alt="Logo du glaive production" className="logo" />
       <p className="bedetheque-title">MA BEDETHEQUE</p>
-      {loading && photos.length === 0 ? (
-        <Spinner />
-      ) : 
 
       <div className="gallery">
         {albums.map((album) => (
@@ -44,7 +41,7 @@ const Bedetheque = () => {
            <p className="album-title">{album.titre || album.title}</p>
           </div>
         ))}
-      </div>}
+      </div>
     </div>
   );
 };

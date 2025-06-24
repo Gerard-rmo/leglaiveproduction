@@ -3,13 +3,9 @@ import { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isAuth, setIsAuth] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const userIsAuthenticated = JSON.parse(localStorage.getItem("isAuth") || "false");
-    setIsAuth(userIsAuthenticated);
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

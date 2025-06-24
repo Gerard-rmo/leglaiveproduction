@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axiosConfig from "../Services/AxiosConfig";
 import logo from '@assets/logo.webp';
 import './DatesSalons.css';
+import SpinnerLogo from '../components/SpinnerLogo';
 
 const DatesSalons = () => {
   const [dates, setDates] = useState([]);
@@ -32,11 +33,11 @@ const DatesSalons = () => {
     });
   };
 
-  if (loading) return <div>Loading dates...</div>;
   if (error) return <div>{error}</div>;
 
   return (
     <div className="dates-salons">
+      {loading && <SpinnerLogo />}
       <img src={logo} alt="Logo" className="dates-logo" />
       
       <h1 className='title-salons'>MES PROCHAINES DATES DE SALONS</h1>
@@ -53,6 +54,7 @@ const DatesSalons = () => {
 };
 
 export default DatesSalons;
+
 
 
 

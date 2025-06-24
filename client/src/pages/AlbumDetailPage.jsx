@@ -2,6 +2,7 @@ import './AlbumDetailPage.css';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axiosConfig from '../Services/AxiosConfig';
+import SpinnerLogo from '../components/SpinnerLogo';
 
 const AlbumDetailPage = () => {
   const { id } = useParams();
@@ -17,14 +18,17 @@ const AlbumDetailPage = () => {
       .catch(err => {
         console.error("Erreur lors du chargement de l'album :", err);
         setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <p>Chargement...</p>;
+  if (loading) return <SpinnerLogo />;
   if (!album) return <p>Album introuvable</p>;
 
   return (
+
     <div className="album-detail-container">
+      {loading && <SpinnerLogo />}
       <h1 className="album-detail-title">{album.title}</h1>
       <img 
         src={album.imageURL?.url} 

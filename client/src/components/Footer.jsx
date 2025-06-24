@@ -1,22 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
-  const [isAuth, setIsAuth] = useState(false);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const userIsAuthenticated = JSON.parse(localStorage.getItem("isAuth") || "false");
-    setIsAuth(userIsAuthenticated);
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem("isAuth");
-    setIsAuth(false);
-    navigate("/login");
-  };
-
+  
   return (
     <footer className="footer">
       <ul className="nav-list">

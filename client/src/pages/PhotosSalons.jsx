@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import axiosConfig from "../Services/AxiosConfig";
 import logo from '@assets/logo.webp';
+import SpinnerLogo from '../components/SpinnerLogo';
 import './PhotosSalons.css';
 
 const PhotosSalons = () => {
   const [photosSalons, setPhotosSalons] = useState([]);
+   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axiosConfig.get('/photos') 
@@ -13,11 +15,13 @@ const PhotosSalons = () => {
         const salonsOnly = data.filter(photo => photo.categorie === "salon");
         setPhotosSalons(salonsOnly);
       })
-      .catch(err => console.error("Erreur chargement:", err));
+      .catch(err => console.error("Erreur chargement:", err))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
     <div className="photos-salons-container">
+      {loading && <SpinnerLogo />}
       <img src={logo} alt="Logo" className="logo" />
       <p className="bedetheque-title">MES PHOTOS DE SALONS</p>
       <ul className="photo-listSa">
@@ -32,6 +36,5 @@ const PhotosSalons = () => {
 };
 
 export default PhotosSalons;
-
 
   

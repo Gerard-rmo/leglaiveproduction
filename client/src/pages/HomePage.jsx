@@ -12,7 +12,6 @@ import slide10 from '@assets/couv.png';
 import slide11 from '@assets/az.png';
 import "./HomePage.css";
 
-// ✅ Key/value format (with descriptive alt texts)
 const slides = [
   { src: slide1, alt: "Tome 1" },
   { src: slide2, alt: "Tome 2" },
@@ -52,4 +51,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

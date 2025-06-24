@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 import logo from '@assets/logo.webp';
 import axiosConfig from '../Services/AxiosConfig.js';
 import "./Bedetheque.css";
+import SpinnerLogo from '../components/SpinnerLogo';
 
 const Bedetheque = () => {
   const navigate = useNavigate();
   const [albums, setAlbums] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axiosConfig.get('/albums') 
@@ -17,11 +19,13 @@ const Bedetheque = () => {
           : res.data.albums || res.data.allAlbum || [];
         setAlbums(data);
       })
-      .catch(err => console.error("Erreur chargement albums :", err));
+      .catch(err => console.error("Erreur chargement albums :", err))
+      .finally(()=>setLoading(false));
   }, []);
 
   return (
     <div className="bedetheque-container">
+      {loading && <SpinnerLogo />}
       <img src={logo} alt="Logo du glaive production" className="logo" />
       <p className="bedetheque-title">MA BEDETHEQUE</p>
 

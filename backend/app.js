@@ -31,8 +31,7 @@ app.use(
 // Middleware pour sécuriser l'application
 app.use(helmet());
 
-// Middleware pour limiter le nombre de requêtes
-// à l'API afin de prévenir les abus
+// Middleware pour limiter le nombre de requêtes API
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 500,

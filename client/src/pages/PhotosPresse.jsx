@@ -9,6 +9,7 @@ const PhotosPresse = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     axiosConfig.get('/photos') 
       .then(res => {
         const data = Array.isArray(res.data) ? res.data : res.data.photos || [];
